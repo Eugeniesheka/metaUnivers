@@ -1,7 +1,11 @@
-# metaUnivers
-# Project Title
+# MetaUnivers
 
-One Paragraph of project description goes here
+
+Description
+Il s’agit de développer une application web permettant à une communauté de cryptophiles
+d'échanger sur les cryptomonnaies du métavers (https://cryptoast.fr/metaverse-comprendre-mondesvirtuels-blockchains-nfts/). Les membres de la communauté inscrits dans l'application peuvent créer
+des annonces pour promouvoir des cryptomonnaies. Ils peuvent aussi émettre un avis sur les
+différentes cryptomonnaies disponibles dans l'application
 
 ## Getting Started
 
