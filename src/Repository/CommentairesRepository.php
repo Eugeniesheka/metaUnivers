@@ -2,11 +2,12 @@
 
 namespace App\Repository;
 
+use App\Entity\User;
 use App\Entity\Commentaires;
-use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
-use Doctrine\ORM\OptimisticLockException;
 use Doctrine\ORM\ORMException;
+use Doctrine\ORM\OptimisticLockException;
 use Doctrine\Persistence\ManagerRegistry;
+use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 
 /**
  * @method Commentaires|null find($id, $lockMode = null, $lockVersion = null)
@@ -44,6 +45,19 @@ class CommentairesRepository extends ServiceEntityRepository
             $this->_em->flush();
         }
     }
+    /**
+   * @return Commentaires[] Returns an array of Commentaires objects
+ */
+    public function getSesCommentaires(User $user)
+    {
+        return $this->createQueryBuilder('c')
+        ->select('c')
+        ->where('c.auteur=:u')
+        ->setParameter('u', $user)
+        ->getQuery()
+        ->getResult();
+    }
+
 
     // /**
     //  * @return Commentaires[] Returns an array of Commentaires objects

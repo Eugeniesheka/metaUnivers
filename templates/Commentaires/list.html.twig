@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+   
+
+<section class ="annoncess">
+    {% for commentaire in commentaires %}
+       <commentaire>
+            <h2> {{commentaire.auteur}}</h2>
+            <div calss ="metadata"> Ecrit le {{commentaire.creatAt|date('d/m/y')}} à {{commentaire.creatAt|date('H:i')}}</div>
+            <div calss ="metadata"> dans la catégorie {{commentaire.contenus|raw}}</div>
+            <div class ="content">
+           
+          
+        </commentaire>
+    {% endfor %}
+    
+    
+</section>
+
+{% endblock %}

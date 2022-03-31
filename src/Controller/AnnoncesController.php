@@ -40,8 +40,6 @@ class AnnoncesController extends AbstractController
     */
     public function show(Annonces $annonce,Request $request,EntityManagerInterface $em){
         $commentaire= new Commentaires();
-       
-        //$comment->setAuthor($this->getUser());
         $form =$this->createForm(CommentairesType::class,$commentaire);
         $form->handleRequest($request);
         if($form->isSubmitted()&& $form->isValid()){
