@@ -83,6 +83,7 @@ class AnnoncesController extends AbstractController
     }
        /**
      * Éditer une annonce .
+     * @IsGranted("ROLE_USER")
      * @Route("annonces/{id}/edit", name="annonce.edit")
      * @param Request $request
      * @param EntityManagerInterface $em

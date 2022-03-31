@@ -6,11 +6,12 @@
              {{annonce.contenu|raw}}
         </div>
     </annonce>
+    {%if app.user%}
     <modifier annonces>
          <a href="{{ path('annonce.edit', {id: annonce.id}) }}" class="btn btn-primary">Modifier </a>
     </modifier annonces>
     <section id="commentaires"
-
+    {% endif %}
     <h2>{{annonce.commentaires|length }}commentaires : </h2>
             {% for comment in annonce.commentaires%}
                 <div class="commentaires">
