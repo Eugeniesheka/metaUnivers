@@ -9,20 +9,51 @@ différentes cryptomonnaies disponibles dans l'application
 
 ## Informations 
 
-Les instructions ci-dessous vous permettront de éployer et utiliser facilement notre application sur une machine ne disposant pas  de Symfony et 
+Les instructions ci-dessous vous permettront de déployer et utiliser facilement notre application sur une machine ne disposant pas  de Symfony et 
 Composer.
 
-### Prerequisites
+### Prerequis 
 
-What things you need to install the software and how to install them
+une version Symfony 4.4 et  une version version 7.4.*
+
+Installation sur Windows
+```
+ Pour une installation facile de PHP, de MySQL sur Windows installez Xampp  sur https://www.apachefriends.org/fr/download.html.
+(a) Installation de Composer :
+Télécharger et installer composer à partir de https://getcomposer.org/Composer-Setup.exe
+
+(b) Installation de l'utilitaire Symfony :
+Télécharger et installer l'utilitaire Symfony à partir de https://get.symfony.com/cli/setup.exe
+
 
 ```
-Give examples
+Installation sur Mac OS 
 ```
+Pour une installation facile de PHP, de MySQL  sur Mac OS installez Mamp sur https://www.mamp.info/en/downloads/. 
+(a) Installation de Composer :
+Exécuter les commandes suivantes dans un terminal :
 
-### Installing
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+php -r "if (hash_file('sha384', 'composer-setup.php') ===
+'756890a4488ce9024fc62c56153228907f1545c228516cbf63f885e036d37e9a59d27d63f46af1d4
+d07ee0f76181c7d3') { echo 'Installer verified'; } else { echo 'Installer corrupt';
+unlink('composer-setup.php'); } echo PHP_EOL;"
+php composer-setup.php --install-dir=/usr/local/bin --filename=composer
+php -r "unlink('composer-setup.php');"
 
-A step by step series of examples that tell you how to get a development env running
+(b) Installation de Composer :
+Exécuter les commandes suivantes dans un terminal :
+
+
+
+curl -sS https://get.symfony.com/cli/installer | bash
+
+
+```
+### Installation sur  Mac OS :
+
+Pour une installation facile de PHP, de MySQL installez Mamp sur https://www.mamp.info/en/downloads/. 
+
 
 Say what the step will be
 
