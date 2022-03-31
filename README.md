@@ -14,7 +14,7 @@ Composer.
 
 ### Prerequis 
 
-une version Symfony 4.4 et  une version version 7.4.*
+une version Symfony 4.4 et  une version php 7.4.*
 
 Installation sur Windows
 ```
@@ -50,75 +50,54 @@ curl -sS https://get.symfony.com/cli/installer | bash
 
 
 ```
-### Installation sur  Mac OS :
+### Deployer l'application 
 
-Pour une installation facile de PHP, de MySQL installez Mamp sur https://www.mamp.info/en/downloads/. 
-
-
-Say what the step will be
-
+vous devriez premierement vider tout les caches en utilisant la commande :  
 ```
-Give the example
+php bin/console cache:clear
 ```
+Vous devriez configurer dans le fichier .env les informations relatives à votre base de données
 
-And repeat
-
+par exemple : 
 ```
-until finished
+DATABASE_URL="mysql://db_user:db_password@127.0.0.1:3306/db_name"
 ```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
+Ensuite vous devrez créer votre base de donnée en exécutant la commande 
 ```
-Give an example
+php bin/console doctrine:database:create --if-not-exists
 ```
 
-### And coding style tests
-
-Explain what these tests test and why
+Ensuite vous pouvez telécharger les fixtures en faissant :
 
 ```
-Give an example
+php bin/console doctrine:fixtures:load
 ```
 
-## Deployment
+## Lancement de l'application 
 
-Add additional notes about how to deploy this on a live system
+vous pouvez lancez l'application en exécutant : 
 
-## Built With
+a) En exécutant dans un terminal la commande suivante de la console :
+```
+php bin/console list
+```
+ou soit 
+b) En lançant le serveur interne de php avec la commande suivante :
+```
+php -S localhost:8000 -t public
+et en essayant dans un navigateur le lien suivant : http://127.0.0.1:8000 ou le lien qui vous sera proposé
+```
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+## Auteurs
 
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Eugénie Sheka ** - *Initial work* - (https://github.com/PurpleBooth)
+* **Halim El outanie ** - *Initial work* - https://github.com/PurpleBooth)
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
-## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
-## Acknowledgments
+## A savoir 
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* Certains bout des codes ont étaient récuperé du tp4 de dev web et ont été adapté au besoin
+
