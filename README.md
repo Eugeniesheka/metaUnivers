@@ -90,11 +90,8 @@ et en essayant dans un navigateur le lien suivant : http://127.0.0.1:8000 ou le 
 
 ## Auteurs
 
-* **Eugénie Sheka ** - *Initial work* - (https://github.com/PurpleBooth)
-* **Halim El outanie ** - *Initial work* - https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
+* **Eugénie Sheka **  - (https://github.com/Eugeniesheka)
+* **Halim El outanie **  - https://github.com/halim2001)
 
 
 ## A savoir 
