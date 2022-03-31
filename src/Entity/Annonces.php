@@ -58,6 +58,12 @@ class Annonces
      * @ORM\OneToMany(targetEntity=Commentaires::class, mappedBy="annonce")
      */
     private $commentaires;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=User::class,cascade={"persist"})
+     * 
+     */
+    private $auteur;
    
     public function __construct()
     {
@@ -173,6 +179,18 @@ class Annonces
                 $commentaire->setAnnonce(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getAuteur(): ?User
+    {
+        return $this->auteur;
+    }
+
+    public function setAuteur(?User $auteur): self
+    {
+        $this->auteur = $auteur;
 
         return $this;
     }

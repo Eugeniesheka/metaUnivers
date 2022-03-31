@@ -6,7 +6,7 @@
              {{annonce.contenu|raw}}
         </div>
     </annonce>
-    {%if app.user%}
+    {%if app.user == annonce.auteur%}
     <modifier annonces>
          <a href="{{ path('annonce.edit', {id: annonce.id}) }}" class="btn btn-primary">Modifier </a>
     </modifier annonces>

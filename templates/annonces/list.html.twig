@@ -6,6 +6,7 @@
     {% for annonce in annonces %}
        <annonce>
             <h2> {{annonce.titre}}</h2>
+            <h2>Ecrit par :  {{annonce.auteur}}</h2>
             <div calss ="metadata"> Ecrit le {{annonce.createAt|date('d/m/y')}} à {{annonce.createAt|date('H:i')}} dans la catégorie {{annonce.secteur.nom}}</div>
             <div class ="content">
             <img class="fit-picture"

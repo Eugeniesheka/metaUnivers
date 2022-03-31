@@ -72,6 +72,8 @@ class AnnoncesController extends AbstractController
         $form = $this->createForm(AnnoncesType::class, $annonce);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
+            $annonce
+           ->setAuteur($this->getUser());
             $em->persist($annonce);
             $em->flush();
             return $this->redirectToRoute('annonces.list');
