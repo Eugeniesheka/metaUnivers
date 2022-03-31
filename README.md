@@ -1,15 +1,16 @@
 # MetaUnivers
 
 
-Description
+
 Il s’agit de développer une application web permettant à une communauté de cryptophiles
 d'échanger sur les cryptomonnaies du métavers (https://cryptoast.fr/metaverse-comprendre-mondesvirtuels-blockchains-nfts/). Les membres de la communauté inscrits dans l'application peuvent créer
 des annonces pour promouvoir des cryptomonnaies. Ils peuvent aussi émettre un avis sur les
 différentes cryptomonnaies disponibles dans l'application
 
-## Getting Started
+## Informations 
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+Les instructions ci-dessous vous permettront de éployer et utiliser facilement notre application sur une machine ne disposant pas  de Symfony et 
+Composer.
 
 ### Prerequisites
 
